@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso de listas</Listas>
+
+</head>
+
+<body> <!-- Contenido que ve el usuario -->
+
+    <header> <!-- Encabezado -->
+        <h1>Ejemplo de diferentes etiquetas</h1> <!-- H1: Título 1 -->
+    </header>
+
+    <main> <!-- Contenido principal -->
+
+        <h2>Habilidades técnicas</h2>
+
+        <h3>Backend</h3>
+
+
+        <h3>Frontend</h3>
+        <h4>Java</h4>
+        <h5>Proyectos</h5>
+        <ul> <!-- Lista desordenada-->
+            <li>Juego: Sopa de letras</li>
+            <ul>
+                <li>Encontrar 10 palabras</li>
+                <li>Tres intentos fallidos</li>
+            </ul>
+            <li>Juego: Battleship</li>
+        </ul>
+        
+        <h4>Python</h4>
+        <h5>Proyectos</h5>
+
+        <ol> <!-- Lista ordenada-->
+            <li>Planilla para RH:</li>
+            <ol type="a">
+                <li>Impuestos</li>
+                <li>Aportes a la CCSS</li>
+                <li>Saldo de vacaciones</li>
+            </ol>
+
+            <li>Machine learning</li>
+        </ol>
+
+        <h2>Habilidades blandas</h2>
+
+        <img src="assets\img\logoCenfotec.png" alt=""> <!-- alt= "": Recurso es decorativo -->
+        <img src="assets\img\areas_academicas.png" alt="Áreas académicas de la ESOFT: Programación, calidad, seguridad y procesos de software."> <!-- alt= "Descripción del recurso": Recurso es informativo -->
+
+
+    </main>
+
+</body>
+
+</html>

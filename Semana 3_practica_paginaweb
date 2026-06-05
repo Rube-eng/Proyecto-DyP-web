@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana 3 practica</title>
+</head>
+<body>
+    
+    <header> <!-- Encabezado -->
+        <h1>Tours Cordillera Talamanca</h1> <!-- H1: Título 1 -->
+        <p>Aqui puedes encontrar informacion con respecto a diferentes lugares ubicadas en la Cordillera de Talamanca, los cuales ofrecen diferentes actividades para disfrutar en familia y amigos.</p>
+    </header>
+
+    <main>
+
+        <h2>Parques nacionales y Reservas Forestales</h2>
+
+        <h4>Cloudbridge</h4>
+        <h5>Actividades</h5>
+        <ul> 
+            <li>Caminata en senderos</li>
+            <ul>
+                <li>Sendero Spiral corto 5km</li>
+                <li>Sendero Catarata medio 7km</li>
+                <li>Sendero Mirador al Pacifico largo 12km</li>
+            </ul>
+            <li>Avistamiento de aves</li>
+            <ul>
+                <li>Con reservacion de cupos Martes y Jueves 5:00am</li>
+            </ul>
+            <li>Caminata nocturna</li>
+            <ul>
+                <li>Reconocimiento de reptiles 7:00pm</li>
+            </ul>
+        </ul>
+        
+        <h4>Reserva Aurora</h4>
+
+        <ol> 
+            <li>actividades</li>
+            <ol type="a">
+                <li>Reconocimiento y recoleccion de hongos</li>
+                <li>High line y slack line</li>
+                <li>Taller botanico de plantas silvestres comestibles</li>
+            </ol>
+
+            <li>Camping</li>
+        </ol>
+
+        <h2>Subida a cerro Uran</h2>
+
+        <img src="c:\Users\Usuario\OneDrive\Pictures\cerro-uran-chirripo.jpg"> 
+        <img src="c:\Users\Usuario\OneDrive\Pictures\Uran-info.webp">
+    </main>
+
+</body>
+
+</html>
