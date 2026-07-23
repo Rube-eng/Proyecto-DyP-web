@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Gestión de Carreras</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Gestión de Carreras</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="login.html">Iniciar Sesión</a></li>
+        <li><a href="perfil.html">Perfil</a></li>
+        <li><a href="carreras.html">Carreras</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <article>
+        <h2>Crear nueva carrera</h2>
+        <form id="formCarrera">
+          <label for="nombreCarrera">Nombre de la carrera:</label>
+          <input type="text" id="nombreCarrera" name="nombreCarrera" required>
+          <span class="error" id="errorNombre"></span>
+
+          <label for="descripcion">Descripción:</label>
+          <textarea id="descripcion" name="descripcion" required></textarea>
+          <span class="error" id="errorDescripcion"></span>
+
+          <button type="submit">Crear Carrera</button>
+        </form>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Universidad CENFOTEC</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
