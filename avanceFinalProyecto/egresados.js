@@ -5,7 +5,7 @@ const regexNombre = /^[A-Za-zÁÉÍÓÚáéíóúñÑ\s]+$/;
 const regexCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const regexTelefono = /^[0-9]{8}$/; // ejemplo: 8 dígitos
 
-form.addEventListener("submit", function(event) {
+form.addEventListener("submit", async function(event) {
   event.preventDefault();
 
   const nombre = document.getElementById("nombre").value.trim();
@@ -39,12 +39,24 @@ form.addEventListener("submit", function(event) {
   if (valido) {
     const egresado = { nombre, correo, telefono };
 
-    let egresados = JSON.parse(localStorage.getItem("egresados")) || [];
-    egresados.push(egresado);
-    localStorage.setItem("egresados", JSON.stringify(egresados));
+    try {
+      const response = await fetch("http://localhost:3000/egresados", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(egresado)
+      });
 
-    form.reset();
-    mostrarEgresados();
+      if (response.ok) {
+        alert("Egresado registrado correctamente.");
+        form.reset();
+        consultarEgresados(); // refrescar vista con GET
+      } else {
+        alert("Error al registrar el egresado.");
+      }
+    } catch (error) {
+      console.error("Error de conexión:", error);
+      alert("No se pudo conectar con el servidor.");
+    }
   }
 });
 
@@ -86,3 +98,31 @@ function editarEgresado(index) {
 }
 
 mostrarEgresados();
+
+// Función GET: consultar lista de egresados
+async function consultarEgresados() {
+  try {
+    const response = await fetch("http://localhost:3000/egresados");
+    const egresados = await response.json();
+
+    tablaBody.innerHTML = "";
+
+    egresados.forEach(e => {
+      const fila = document.createElement("tr");
+      fila.innerHTML = `
+        <td>${e.nombre}</td>
+        <td>${e.correo}</td>
+        <td>${e.telefono}</td>
+      `;
+      tablaBody.appendChild(fila);
+    });
+
+    console.log("Lista de egresados:", egresados);
+  } catch (error) {
+    console.error("Error al consultar egresados:", error);
+    alert("No se pudo obtener la lista de egresados.");
+  }
+}
+
+// Ejecutar GET al cargar la página
+consultarEgresados();
